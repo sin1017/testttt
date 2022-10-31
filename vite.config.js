@@ -5,6 +5,9 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/eric-project/'
+    : '/',
   plugins: [vue()],
   base: './',
   resolve: {
